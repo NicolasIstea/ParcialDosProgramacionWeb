@@ -1,0 +1,10 @@
+<h1 class="display-4" mat-dialog-title>Resumen del pago:</h1>
+
+<div mat-dialog-content>
+  <h3>Su pago con nombre <i>{{data.descripcion}}</i> con monto <i>{{data.deuda}} </i> se ha creado con exito!</h3>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button (click)="cerrarModal()" [routerLink]="['/pago-nuevo']">Crear otro Pago</button>
+  <button mat-button [routerLink]="['/pago']" (click)="cerrarModal()" cdkFocusInitial>Volver a la lista de pagos</button>
+</div>
