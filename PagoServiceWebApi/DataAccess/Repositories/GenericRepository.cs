@@ -3,6 +3,7 @@ using Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace DataAccess.Repositories
@@ -30,6 +31,18 @@ namespace DataAccess.Repositories
             var entity = await GetById(id);
             table.Remove(entity);
             await SaveChanges();
+        }
+
+        public virtual async Task<IEnumerable<T>> Get(Expression<Func<T, bool>> filter = null)
+        {
+            IQueryable<T> query = table;
+            if (filter != null)
+            {
+                query = query.Where(filter);
+            }
+
+            return await query.ToListAsync();
+
         }
 
         public virtual async Task<IEnumerable<T>> GetAll()

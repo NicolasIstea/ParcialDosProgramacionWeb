@@ -10,7 +10,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PagosComponent } from './pagos/pagos.component';
 import { FormularioPagoComponent } from './pagos/formulario-pago/formulario-pago.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { ReactiveFormsModule } from '@angular/forms';
@@ -39,6 +39,8 @@ import { LoginComponent } from './login/login.component';
 import { AppAuthGuardService } from './app-auth-guard.service';
 import { MetodoDePagoService } from './servicios/metodo-de-pago.service';
 import { PagoService } from './servicios/pago.service';
+import { InterceptorService } from './servicios/interceptor.service';
+import { RegistracionComponent } from './registracion/registracion.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +51,7 @@ import { PagoService } from './servicios/pago.service';
     FormularioPagoComponent,
     ModalCrearPagoComponent,
     LoginComponent,
+    RegistracionComponent,
   ],
   imports: [
     MatButtonModule,
@@ -79,6 +82,7 @@ import { PagoService } from './servicios/pago.service';
     HttpClientModule,
     RouterModule.forRoot([
       { path: 'login', component: LoginComponent, pathMatch: 'full' },
+      { path: 'registracion', component: RegistracionComponent, pathMatch: 'full' },
       { path: 'inicio', component: InicioComponent, canActivate:[AppAuthGuardService], pathMatch: 'full' },
       { path: 'pago', component: PagosComponent, canActivate:[AppAuthGuardService], pathMatch: 'full'},
       { path: 'pago-nuevo', component: FormularioPagoComponent, canActivate:[AppAuthGuardService], pathMatch: 'full'},
@@ -86,7 +90,12 @@ import { PagoService } from './servicios/pago.service';
     ]),
   ],
   exports: [],
-  providers: [MatDatepickerModule, AppAuthGuardService, MetodoDePagoService, PagoService
+  providers: [
+    MatDatepickerModule, 
+    AppAuthGuardService, 
+    MetodoDePagoService, 
+    PagoService, 
+    { provide: HTTP_INTERCEPTORS, useClass:InterceptorService, multi:true }
   ],
   bootstrap: [AppComponent,
   ]

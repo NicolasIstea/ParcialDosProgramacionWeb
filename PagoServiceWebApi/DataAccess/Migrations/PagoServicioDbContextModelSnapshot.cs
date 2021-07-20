@@ -59,6 +59,43 @@ namespace DataAccess.Migrations
                     b.ToTable("Pagos");
                 });
 
+            modelBuilder.Entity("Models.Usuario", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Apellido")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Contraseña")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("DNI")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Rol")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Sal")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UsuarioNombre")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioNombre")
+                        .IsUnique()
+                        .HasFilter("[UsuarioNombre] IS NOT NULL");
+
+                    b.ToTable("Usuarios");
+                });
+
             modelBuilder.Entity("Models.Pago", b =>
                 {
                     b.HasOne("Models.MetodoDePago", "MetodoDePago")

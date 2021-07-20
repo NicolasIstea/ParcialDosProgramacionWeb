@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nicol\\Source\\repos\\PagoServiceWebApi\\Models\\Models.csproj": {}
+    "C:\\Users\\nicol\\Desktop\\Analista de Sistemas\\Segundo Año\\Primer Cuatrimestre\\Programacion Web\\Contenido Segundo Parcial\\Proyecto\\PagoServiceWebApi\\Models\\Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nicol\\Source\\repos\\PagoServiceWebApi\\Models\\Models.csproj": {
+    "C:\\Users\\nicol\\Desktop\\Analista de Sistemas\\Segundo Año\\Primer Cuatrimestre\\Programacion Web\\Contenido Segundo Parcial\\Proyecto\\PagoServiceWebApi\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nicol\\Source\\repos\\PagoServiceWebApi\\Models\\Models.csproj",
+        "projectUniqueName": "C:\\Users\\nicol\\Desktop\\Analista de Sistemas\\Segundo Año\\Primer Cuatrimestre\\Programacion Web\\Contenido Segundo Parcial\\Proyecto\\PagoServiceWebApi\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "C:\\Users\\nicol\\Source\\repos\\PagoServiceWebApi\\Models\\Models.csproj",
+        "projectPath": "C:\\Users\\nicol\\Desktop\\Analista de Sistemas\\Segundo Año\\Primer Cuatrimestre\\Programacion Web\\Contenido Segundo Parcial\\Proyecto\\PagoServiceWebApi\\Models\\Models.csproj",
         "packagesPath": "C:\\Users\\nicol\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nicol\\Source\\repos\\PagoServiceWebApi\\Models\\obj\\",
+        "outputPath": "C:\\Users\\nicol\\Desktop\\Analista de Sistemas\\Segundo Año\\Primer Cuatrimestre\\Programacion Web\\Contenido Segundo Parcial\\Proyecto\\PagoServiceWebApi\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
@@ -43,6 +43,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authorization": {
+              "target": "Package",
+              "version": "[5.0.8, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -58,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

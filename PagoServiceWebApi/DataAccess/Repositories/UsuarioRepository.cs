@@ -9,7 +9,8 @@ namespace DataAccess.Repositories
 {
     public class UsuarioRepository : GenericRepository<Usuario>, IUsuarioRepository
     {
-        public UsuarioRepository(PagoServicioDbContext pagoServicioDbContext) : base(pagoServicioDbContext) { }
-
+        public UsuarioRepository(PagoServicioDbContext pagoServicioDbContext) : base(pagoServicioDbContext)
+        {
+        }
     }
 }

@@ -12,6 +12,7 @@ namespace DataAccess
     {
         public virtual DbSet<MetodoDePago> MetodosDePago { get; set; }
         public virtual DbSet<Pago> Pagos { get; set; }
+        public virtual DbSet<Usuario> Usuarios { get; set; }
 
         public PagoServicioDbContext()
         {
@@ -19,6 +20,14 @@ namespace DataAccess
 
         public PagoServicioDbContext(DbContextOptions<PagoServicioDbContext> options) : base(options: options)
         {
+
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Usuario>()
+                .HasIndex(u => u.UsuarioNombre)
+                .IsUnique();
         }
     }
 }

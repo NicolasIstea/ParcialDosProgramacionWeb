@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Models;
 using Services;
 using Services.Exceptions;
@@ -20,7 +22,11 @@ namespace WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<T>> AddEntity([FromBody] T entity)
+        [Authorize]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public virtual async Task<ActionResult<T>> AddEntity([FromBody] T entity)
         {
             T entidad;
 
@@ -34,7 +40,7 @@ namespace WebApi.Controllers
             }
             catch (Exception)
             {
-                return StatusCode(500);
+                return StatusCode(StatusCodes.Status500InternalServerError);
             }
 
             return CreatedAtAction("AddEntity",entidad);
@@ -43,7 +49,10 @@ namespace WebApi.Controllers
 
         [HttpDelete]
         [Route("{id}")]
-        public async Task<ActionResult> DeleteEntity([FromRoute] int id)
+        [Authorize]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        public virtual async Task<ActionResult> DeleteEntity([FromRoute] int id)
         {
 
             try
@@ -52,7 +61,7 @@ namespace WebApi.Controllers
             }
             catch (Exception)
             {
-                return StatusCode(500);
+                return StatusCode(StatusCodes.Status500InternalServerError);
             }
 
             return NoContent();
@@ -61,7 +70,11 @@ namespace WebApi.Controllers
 
         [HttpGet]
         [Route("{id:int}")]
-        public async Task<ActionResult<T>> GetById([FromRoute] int id)
+        [Authorize]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        public virtual async Task<ActionResult<T>> GetById([FromRoute] int id)
         {
             T entidad;
 
@@ -71,14 +84,23 @@ namespace WebApi.Controllers
             }
             catch (Exception)
             {
-                return StatusCode(500);
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
+
+            if(entidad == null)
+            {
+                return NoContent();
             }
 
             return Ok(entidad);
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<T>>> GetEntities()
+        [Authorize]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        public virtual async Task<ActionResult<List<T>>> GetEntities()
         {
             IEnumerable<T> entities;
 
@@ -88,7 +110,7 @@ namespace WebApi.Controllers
             }
             catch (Exception)
             {
-                return StatusCode(500);
+                return StatusCode(StatusCodes.Status500InternalServerError);
             }
 
             if(entities == null)
@@ -100,7 +122,11 @@ namespace WebApi.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult<T>> UpdateEntity(T entity)
+        [Authorize]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public virtual async Task<ActionResult<T>> UpdateEntity(T entity)
         {
             T entidad;
 
@@ -115,7 +141,7 @@ namespace WebApi.Controllers
             }
             catch (Exception)
             {
-                return StatusCode(500);
+                return StatusCode(StatusCodes.Status500InternalServerError);
             }
 
             return Ok(entidad);

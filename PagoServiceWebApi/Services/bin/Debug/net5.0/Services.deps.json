@@ -15,6 +15,27 @@
           "Services.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Authorization/5.0.8": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Metadata": "5.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "5.0.0",
+          "Microsoft.Extensions.Options": "5.0.0"
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Authorization.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.821.31805"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Metadata/5.0.8": {
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Metadata.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.821.31805"
+          }
+        }
+      },
       "Microsoft.CSharp/4.5.0": {},
       "Microsoft.Data.SqlClient/2.0.1": {
         "dependencies": {
@@ -1050,6 +1071,9 @@
         }
       },
       "Models/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authorization": "5.0.8"
+        },
         "runtime": {
           "Models.dll": {}
         }
@@ -1061,6 +1085,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Microsoft.AspNetCore.Authorization/5.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7PKGjQUmMhlGFTx+HZxR1WO3pBceOeMtCRdZ8ERHMulmX8UecHSPnoo28AYrt6aBrYy4fsNkYSjwZlUQxp6DAw==",
+      "path": "microsoft.aspnetcore.authorization/5.0.8",
+      "hashPath": "microsoft.aspnetcore.authorization.5.0.8.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Metadata/5.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+H9/+YSo2LIeBfhucnXm+cx/u+UciDDG3Sm4rceBQYxtE1d5Yt9AGD16tDAZtJnLheV/LQIWvrIl4gMH/2UmBA==",
+      "path": "microsoft.aspnetcore.metadata/5.0.8",
+      "hashPath": "microsoft.aspnetcore.metadata.5.0.8.nupkg.sha512"
     },
     "Microsoft.CSharp/4.5.0": {
       "type": "package",

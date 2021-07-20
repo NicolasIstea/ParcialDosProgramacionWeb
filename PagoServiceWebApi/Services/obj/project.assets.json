@@ -2,6 +2,29 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "Microsoft.AspNetCore.Authorization/5.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Metadata": "5.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "5.0.0",
+          "Microsoft.Extensions.Options": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Microsoft.AspNetCore.Authorization.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Authorization.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Metadata/5.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Microsoft.AspNetCore.Metadata.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Metadata.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.5.0": {
         "type": "package",
         "compile": {
@@ -1499,6 +1522,9 @@
       "Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authorization": "5.0.8"
+        },
         "compile": {
           "bin/placeholder/Models.dll": {}
         },
@@ -1509,6 +1535,44 @@
     }
   },
   "libraries": {
+    "Microsoft.AspNetCore.Authorization/5.0.8": {
+      "sha512": "7PKGjQUmMhlGFTx+HZxR1WO3pBceOeMtCRdZ8ERHMulmX8UecHSPnoo28AYrt6aBrYy4fsNkYSjwZlUQxp6DAw==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authorization/5.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.AspNetCore.Authorization.dll",
+        "lib/net461/Microsoft.AspNetCore.Authorization.xml",
+        "lib/net5.0/Microsoft.AspNetCore.Authorization.dll",
+        "lib/net5.0/Microsoft.AspNetCore.Authorization.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.xml",
+        "microsoft.aspnetcore.authorization.5.0.8.nupkg.sha512",
+        "microsoft.aspnetcore.authorization.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Metadata/5.0.8": {
+      "sha512": "+H9/+YSo2LIeBfhucnXm+cx/u+UciDDG3Sm4rceBQYxtE1d5Yt9AGD16tDAZtJnLheV/LQIWvrIl4gMH/2UmBA==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.metadata/5.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.AspNetCore.Metadata.dll",
+        "lib/net461/Microsoft.AspNetCore.Metadata.xml",
+        "lib/net5.0/Microsoft.AspNetCore.Metadata.dll",
+        "lib/net5.0/Microsoft.AspNetCore.Metadata.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.xml",
+        "microsoft.aspnetcore.metadata.5.0.8.nupkg.sha512",
+        "microsoft.aspnetcore.metadata.nuspec"
+      ]
+    },
     "Microsoft.CSharp/4.5.0": {
       "sha512": "kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
       "type": "package",
@@ -5694,11 +5758,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nicol\\Source\\repos\\PagoServiceWebApi\\Services\\Services.csproj",
+      "projectUniqueName": "C:\\Users\\nicol\\Desktop\\Analista de Sistemas\\Segundo Año\\Primer Cuatrimestre\\Programacion Web\\Contenido Segundo Parcial\\Proyecto\\PagoServiceWebApi\\Services\\Services.csproj",
       "projectName": "Services",
-      "projectPath": "C:\\Users\\nicol\\Source\\repos\\PagoServiceWebApi\\Services\\Services.csproj",
+      "projectPath": "C:\\Users\\nicol\\Desktop\\Analista de Sistemas\\Segundo Año\\Primer Cuatrimestre\\Programacion Web\\Contenido Segundo Parcial\\Proyecto\\PagoServiceWebApi\\Services\\Services.csproj",
       "packagesPath": "C:\\Users\\nicol\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nicol\\Source\\repos\\PagoServiceWebApi\\Services\\obj\\",
+      "outputPath": "C:\\Users\\nicol\\Desktop\\Analista de Sistemas\\Segundo Año\\Primer Cuatrimestre\\Programacion Web\\Contenido Segundo Parcial\\Proyecto\\PagoServiceWebApi\\Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
@@ -5719,11 +5783,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\nicol\\Source\\repos\\PagoServiceWebApi\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\nicol\\Source\\repos\\PagoServiceWebApi\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\nicol\\Desktop\\Analista de Sistemas\\Segundo Año\\Primer Cuatrimestre\\Programacion Web\\Contenido Segundo Parcial\\Proyecto\\PagoServiceWebApi\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\nicol\\Desktop\\Analista de Sistemas\\Segundo Año\\Primer Cuatrimestre\\Programacion Web\\Contenido Segundo Parcial\\Proyecto\\PagoServiceWebApi\\DataAccess\\DataAccess.csproj"
             },
-            "C:\\Users\\nicol\\Source\\repos\\PagoServiceWebApi\\Models\\Models.csproj": {
-              "projectPath": "C:\\Users\\nicol\\Source\\repos\\PagoServiceWebApi\\Models\\Models.csproj"
+            "C:\\Users\\nicol\\Desktop\\Analista de Sistemas\\Segundo Año\\Primer Cuatrimestre\\Programacion Web\\Contenido Segundo Parcial\\Proyecto\\PagoServiceWebApi\\Models\\Models.csproj": {
+              "projectPath": "C:\\Users\\nicol\\Desktop\\Analista de Sistemas\\Segundo Año\\Primer Cuatrimestre\\Programacion Web\\Contenido Segundo Parcial\\Proyecto\\PagoServiceWebApi\\Models\\Models.csproj"
             }
           }
         }
@@ -5752,7 +5816,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -5,3 +5,7 @@ div > img{
 ul > li:nth-child(3){
     margin-right: 10px;
 }
+
+li{ 
+    cursor: pointer; 
+}

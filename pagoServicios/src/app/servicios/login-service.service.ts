@@ -1,37 +1,43 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { Usuario } from '../modelos/usuario';
+import { map } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
 
-  private isLoggedIn: boolean;
-  private userName: string;
+  private apiUrl:string = "https://localhost:44329" + "/api/Login/loginUser"
 
-  constructor() { 
-    this.isLoggedIn = false;
+  constructor(private http: HttpClient) { 
   }
 
-  login(userName: string, password: string): Observable<boolean>{
+  login(user: Usuario) {
 
     //TODO: Llamado al servicio de login en el backend
-
-    this.isLoggedIn = true;
-    this.userName = userName;
-
-    localStorage.setItem('isLoggedIn', this.isLoggedIn.toString());
-
-    return of(this.isLoggedIn);
+    return this.http.post<any>(this.apiUrl, user)
+    .pipe(
+      map(respuesta => {
+          localStorage.setItem('UsuarioGuardado', JSON.stringify(respuesta));  
+          return respuesta;
+      })
+      
+    ); 
   }
 
   isUserLoggedIn(): boolean {
-    let isLoggedIn = (/true/i).test(localStorage.getItem('isLoggedIn'));
+    let isLoggedIn = localStorage.getItem('UsuarioGuardado');
 
-    return isLoggedIn;
+    if(isLoggedIn !== null) {
+      return true;
+    }
+
+    return false;
   }
 
   logoutUser(): void{
-    localStorage.setItem('isLoggedIn', 'false');
+    localStorage.removeItem('UsuarioGuardado');
   }
 }

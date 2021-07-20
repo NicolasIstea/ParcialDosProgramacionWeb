@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoginService } from '../servicios/login-service.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class NavMenuComponent implements OnInit {
   desloguearse:string="Desloguearse";
   logueado:Boolean;
 
-  constructor(public authService: LoginService) { 
+  constructor(public authService: LoginService, public router: Router) { 
     this.logueado = authService.isUserLoggedIn();
   }
 
@@ -28,10 +29,13 @@ export class NavMenuComponent implements OnInit {
   }
   
   ngOnInit(): void {
+    this.logueado = this.authService.isUserLoggedIn();
   }
 
   desloguear(): void {
     this.authService.logoutUser();
+    this.logueado = false;
+    this.router.navigate(['login']);
   }
 
 }

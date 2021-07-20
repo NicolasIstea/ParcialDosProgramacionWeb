@@ -1,0 +1,86 @@
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<h1 class="display-1">{{titulo}}</h1>
+<mat-sidenav-container>
+    <mat-sidenav-content>
+      <form [formGroup]="pagoFormulario" (ngSubmit)="submitFormulario()" novalidate>
+        
+        <mat-form-field class="example-full-width">
+          <mat-label>Nombre</mat-label>
+          <input matInput placeholder="Nombre" formControlName="nombre">
+          <mat-error *ngIf="pagoFormulario.get('nombre')!.hasError('required')">
+            El Campo nombre es requerido.
+          </mat-error>
+          <mat-error *ngIf="pagoFormulario.get('nombre')!.hasError('pattern')">
+            El Campo nombre debe contener solo letras.
+          </mat-error>
+          <mat-error *ngIf="pagoFormulario.get('nombre')!.hasError('maxLength')">
+            El campo nombre no puede contener mas de 20 letras.
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Apellido</mat-label>
+          <input matInput placeholder="Apellido" formControlName="apellido">
+          <mat-error *ngIf="pagoFormulario.get('apellido')!.hasError('required')">
+            El Campo Apellido es requerido.
+          </mat-error>
+          <mat-error *ngIf="pagoFormulario.get('apellido')!.hasError('pattern')">
+            El Campo Apellido debe contener solo letras.
+          </mat-error>
+          <mat-error *ngIf="pagoFormulario.get('apellido')!.hasError('maxLength')">
+            El campo Apellido no puede contener mas de 20 letras.
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>DNI</mat-label>
+            <input matInput placeholder="DNI" formControlName="dni">
+            <mat-error *ngIf="pagoFormulario.get('dni')!.hasError('required')">
+              El Campo DNI es requerido.
+            </mat-error>
+            <mat-error *ngIf="pagoFormulario.get('dni')!.hasError('pattern')">
+              El Campo DNI debe contener solo numeros
+            </mat-error>
+            <mat-error *ngIf="pagoFormulario.get('dni')!.hasError('maxLength')">
+                El Campo DNI no puede ser mayor a 9 digits.
+              </mat-error>
+              <mat-error *ngIf="pagoFormulario.get('dni')!.hasError('minLength')">
+                El Campo DNI no puede ser menor a 7 digitos.
+              </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Usuario</mat-label>
+            <input matInput placeholder="Usuario" formControlName="usuarioNombre">
+            <mat-error *ngIf="pagoFormulario.get('usuarioNombre')!.hasError('required')">
+              El Campo Usuario es requerido.
+            </mat-error>
+            <mat-error *ngIf="pagoFormulario.get('usuarioNombre')!.hasError('pattern')">
+              El Campo Usuario debe contener solo letras.
+            </mat-error>
+            <mat-error *ngIf="pagoFormulario.get('usuarioNombre')!.hasError('maxLength')">
+              El campo Usuario no puede contener mas de 20 letras.
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Contraseña</mat-label>
+            <input matInput type="password" formControlName="contraseña">
+            <mat-error *ngIf="pagoFormulario.get('usuarioNombre')!.hasError('required')">
+              El Campo Contraseña es requerido.
+            </mat-error>
+        </mat-form-field>
+
+        <div class="button-wrapper">
+          <button mat-flat-button color="primary">Crear</button>
+        </div>
+         
+      </form>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+<div class="btn-group" role="group">
+  <button class="btn btn-primary" [routerLink]="['/login']">Volver al login</button>
+</div>

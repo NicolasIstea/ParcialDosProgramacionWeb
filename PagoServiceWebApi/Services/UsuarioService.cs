@@ -1,9 +1,6 @@
 ﻿using DataAccess.Repositories;
 using Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using Models.Exceptions;
 using System.Threading.Tasks;
 
 namespace Services
@@ -11,9 +8,37 @@ namespace Services
     public class UsuarioService : GenericService<Usuario>, IUsuarioService
     {
         private readonly IUsuarioRepository _usuarioRepository;
-        public UsuarioService(IUsuarioRepository usuarioRepository) : base(usuarioRepository)
+        private readonly IPasswordSecurity _passwordSecurity;
+        public UsuarioService(IUsuarioRepository usuarioRepository
+            , IPasswordSecurity passwordSecurity) : base(usuarioRepository)
         {
             _usuarioRepository = usuarioRepository;
+            _passwordSecurity = passwordSecurity;
+        }
+
+        public override async Task<Usuario> AddEntity(Usuario entity)
+        {
+            //Verificar que no exista el usuario previamente
+            var usuario = _usuarioRepository.Get(x => x.UsuarioNombre == entity.UsuarioNombre);
+
+            if(usuario != null)
+            {
+                throw new ValidationException("2601");
+            }
+
+            string sal = _passwordSecurity.GenerateSalt();
+            string contraseñaHasheada = _passwordSecurity.HashPassword(entity.Contraseña, sal);
+
+            entity.Sal = sal;
+            entity.Contraseña = contraseñaHasheada;
+            entity.Rol = "Admin";
+
+            var entidad = await _usuarioRepository.Add(entity);
+
+            entidad.Sal = "";
+            entidad.Contraseña = "";
+
+            return entidad;
         }
     }
 }

@@ -10,3 +10,15 @@ C:\Users\nicol\Source\repos\PagoServiceWebApi\Models\obj\Debug\net5.0\Models.csp
 C:\Users\nicol\Source\repos\PagoServiceWebApi\Models\obj\Debug\net5.0\Models.dll
 C:\Users\nicol\Source\repos\PagoServiceWebApi\Models\obj\Debug\net5.0\ref\Models.dll
 C:\Users\nicol\Source\repos\PagoServiceWebApi\Models\obj\Debug\net5.0\Models.pdb
+C:\Users\nicol\Desktop\Analista de Sistemas\Segundo Año\Primer Cuatrimestre\Programacion Web\Contenido Segundo Parcial\Proyecto\PagoServiceWebApi\Models\bin\Debug\net5.0\Models.deps.json
+C:\Users\nicol\Desktop\Analista de Sistemas\Segundo Año\Primer Cuatrimestre\Programacion Web\Contenido Segundo Parcial\Proyecto\PagoServiceWebApi\Models\bin\Debug\net5.0\Models.dll
+C:\Users\nicol\Desktop\Analista de Sistemas\Segundo Año\Primer Cuatrimestre\Programacion Web\Contenido Segundo Parcial\Proyecto\PagoServiceWebApi\Models\bin\Debug\net5.0\ref\Models.dll
+C:\Users\nicol\Desktop\Analista de Sistemas\Segundo Año\Primer Cuatrimestre\Programacion Web\Contenido Segundo Parcial\Proyecto\PagoServiceWebApi\Models\bin\Debug\net5.0\Models.pdb
+C:\Users\nicol\Desktop\Analista de Sistemas\Segundo Año\Primer Cuatrimestre\Programacion Web\Contenido Segundo Parcial\Proyecto\PagoServiceWebApi\Models\obj\Debug\net5.0\Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nicol\Desktop\Analista de Sistemas\Segundo Año\Primer Cuatrimestre\Programacion Web\Contenido Segundo Parcial\Proyecto\PagoServiceWebApi\Models\obj\Debug\net5.0\Models.AssemblyInfoInputs.cache
+C:\Users\nicol\Desktop\Analista de Sistemas\Segundo Año\Primer Cuatrimestre\Programacion Web\Contenido Segundo Parcial\Proyecto\PagoServiceWebApi\Models\obj\Debug\net5.0\Models.AssemblyInfo.cs
+C:\Users\nicol\Desktop\Analista de Sistemas\Segundo Año\Primer Cuatrimestre\Programacion Web\Contenido Segundo Parcial\Proyecto\PagoServiceWebApi\Models\obj\Debug\net5.0\Models.csproj.CoreCompileInputs.cache
+C:\Users\nicol\Desktop\Analista de Sistemas\Segundo Año\Primer Cuatrimestre\Programacion Web\Contenido Segundo Parcial\Proyecto\PagoServiceWebApi\Models\obj\Debug\net5.0\Models.dll
+C:\Users\nicol\Desktop\Analista de Sistemas\Segundo Año\Primer Cuatrimestre\Programacion Web\Contenido Segundo Parcial\Proyecto\PagoServiceWebApi\Models\obj\Debug\net5.0\ref\Models.dll
+C:\Users\nicol\Desktop\Analista de Sistemas\Segundo Año\Primer Cuatrimestre\Programacion Web\Contenido Segundo Parcial\Proyecto\PagoServiceWebApi\Models\obj\Debug\net5.0\Models.pdb
+C:\Users\nicol\Desktop\Analista de Sistemas\Segundo Año\Primer Cuatrimestre\Programacion Web\Contenido Segundo Parcial\Proyecto\PagoServiceWebApi\Models\obj\Debug\net5.0\Models.csproj.AssemblyReference.cache

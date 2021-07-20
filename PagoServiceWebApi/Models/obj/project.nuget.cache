@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "IhreDAUrlccUTjBgWb99LIRDhPuUvAt3OGHkuKEvjcYE/96gLUQ+q5w/Zys3R970KTPn1HEulLh5E0amoKErig==",
+  "dgSpecHash": "koiTythLWeZul8TMyugQLbhqSVEpeIMbaMWNNBUdZM4PupxhCL79NBxU92u37Ohvb9CMsMjJAf2zD7eSaH2MlQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nicol\\Source\\repos\\PagoServiceWebApi\\Models\\Models.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\nicol\\Desktop\\Analista de Sistemas\\Segundo Año\\Primer Cuatrimestre\\Programacion Web\\Contenido Segundo Parcial\\Proyecto\\PagoServiceWebApi\\Models\\Models.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nicol\\.nuget\\packages\\microsoft.aspnetcore.authorization\\5.0.8\\microsoft.aspnetcore.authorization.5.0.8.nupkg.sha512",
+    "C:\\Users\\nicol\\.nuget\\packages\\microsoft.aspnetcore.metadata\\5.0.8\\microsoft.aspnetcore.metadata.5.0.8.nupkg.sha512",
+    "C:\\Users\\nicol\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\nicol\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\nicol\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
+    "C:\\Users\\nicol\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

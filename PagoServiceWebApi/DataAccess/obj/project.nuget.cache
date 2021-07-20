@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Yrb1H77D+U/e094DW3lv0oHHth+34PZsodx+lTEvDgs8kAInVtrm0RKlVXK/yXWoARkmZgCDi/ixOsK1V3gk2g==",
+  "dgSpecHash": "FVwbpPPR5eKugJk/crx3DiA05dK7yfkulwaJ3QZaYO6HzfjX7x4UAhgjFmVORn5BPzVar3ku5pcUcX2gsRmgPg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nicol\\Source\\repos\\PagoServiceWebApi\\DataAccess\\DataAccess.csproj",
+  "projectFilePath": "C:\\Users\\nicol\\Desktop\\Analista de Sistemas\\Segundo Año\\Primer Cuatrimestre\\Programacion Web\\Contenido Segundo Parcial\\Proyecto\\PagoServiceWebApi\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nicol\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\nicol\\.nuget\\packages\\microsoft.aspnetcore.authorization\\5.0.8\\microsoft.aspnetcore.authorization.5.0.8.nupkg.sha512",
+    "C:\\Users\\nicol\\.nuget\\packages\\microsoft.aspnetcore.metadata\\5.0.8\\microsoft.aspnetcore.metadata.5.0.8.nupkg.sha512",
     "C:\\Users\\nicol\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\nicol\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\nicol\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",
