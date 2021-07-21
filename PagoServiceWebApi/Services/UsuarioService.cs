@@ -1,6 +1,7 @@
 ﻿using DataAccess.Repositories;
 using Models;
 using Models.Exceptions;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Services
@@ -19,9 +20,9 @@ namespace Services
         public override async Task<Usuario> AddEntity(Usuario entity)
         {
             //Verificar que no exista el usuario previamente
-            var usuario = _usuarioRepository.Get(x => x.UsuarioNombre == entity.UsuarioNombre);
+            List<Usuario> usuarios = await _usuarioRepository.Get(x => x.UsuarioNombre == entity.UsuarioNombre);
 
-            if(usuario != null)
+            if(usuarios.Count > 0)
             {
                 throw new ValidationException("2601");
             }

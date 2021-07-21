@@ -12,7 +12,7 @@ namespace DataAccess.Repositories
     {
         Task<IEnumerable<T>> GetAll();
         Task<T> GetById(int id);
-        Task<IEnumerable<T>> Get(
+        Task<List<T>> Get(
             Expression<Func<T, bool>> filter = null);
         Task<T> Add(T entity);
         Task Delete(int id);

@@ -33,7 +33,7 @@ namespace DataAccess.Repositories
             await SaveChanges();
         }
 
-        public virtual async Task<IEnumerable<T>> Get(Expression<Func<T, bool>> filter = null)
+        public virtual async Task<List<T>> Get(Expression<Func<T, bool>> filter = null)
         {
             IQueryable<T> query = table;
             if (filter != null)
